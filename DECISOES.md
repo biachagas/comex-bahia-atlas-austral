@@ -76,3 +76,4 @@ Registro das escolhas feitas na construção do site (atualizado a cada etapa).
 
 - **Declaração de uso de IA** (01/11/2026): incluída na seção 9 da Metodologia (PT e EN) e no README, com a redação aprovada pela autora ("sob orientação, revisão e permissões da autora").
 - **Endereço da página Municípios** (01/11/2026): passa a ser `#municipios`; links antigos com `#territorio` são redirecionados automaticamente.
+- **Tradução das dicas das rodovias** (01/11/2026): tipos de pista, avaliações CNT e as 57 descrições de corredor da aba 3 traduzidas para o inglês no dicionário (`assets/js/i18n-en.js`), com a nota "Descriptions translated from Portuguese" na versão EN; tradução feita com apoio de IA, sujeita à revisão da autora. Nomes de lugares, empresas e siglas mantidos.
