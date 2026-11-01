@@ -89,16 +89,17 @@
   U.baixarCSV = (nome, cab, linhas) => {
     const esc = v => {
       const s = v == null ? "" : String(v);
-      return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      return /[;,"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
     };
-    const txt = "﻿" + [cab, ...linhas].map(l => l.map(esc).join(";")).join("\r\n");
+    const sep = I18N.lang === "en" ? "," : ";"; // Excel em inglês separa por vírgula; em português, por ponto e vírgula
+    const txt = "﻿" + [cab, ...linhas].map(l => l.map(esc).join(sep)).join("\r\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([txt], { type: "text/csv;charset=utf-8" }));
     a.download = nome; document.body.appendChild(a); a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
   };
   U.numCSV = v => v == null ? "" : String(Math.round(v));
-  U.pctCSV = v => v == null ? "" : v.toFixed(1).replace(".", ",");
+  U.pctCSV = v => v == null ? "" : (I18N.lang === "en" ? v.toFixed(1) : v.toFixed(1).replace(".", ","));
 
   const MESES = { pt: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
                   en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] };

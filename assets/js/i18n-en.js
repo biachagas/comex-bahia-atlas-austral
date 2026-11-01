@@ -272,6 +272,7 @@ window.I18N_EN = {
  "Oeste Baiano Norte -> Fuga para Ferrovia Norte-Sul e Porto do Itaqui (MA)": "Northern West Bahia -> leakage to the North–South Railway and the Port of Itaqui (MA)",
  "Olindina, Itapicuru até divisa com Sergipe": "Olindina, Itapicuru to the Sergipe border",
  "Os <b>{0}</b> maiores somam <b>{1}</b> do total": "The <b>{0}</b> largest account for <b>{1}</b> of the total",
+ "Os arquivos trazem o ano e o fluxo escolhidos. Abrem direto no Excel.": "Files contain the selected year and flow. They open directly in Excel.",
  "Os valores referem-se ao <b>domicílio fiscal</b> da empresa, e não ao local de produção ou de embarque.": "Values refer to the company's <b>tax domicile</b>, not to the place of production or shipment.",
  "Ouro": "Gold",
  "Outros": "Other",
@@ -482,5 +483,7 @@ window.I18N_EN = {
  "Índia": "India",
  "Ótimo": "Excellent",
  "Ótimo / Bom": "Excellent / Good",
- "⬇ Baixar CSV": "⬇ Download CSV"
+ "⬇ Baixar CSV": "⬇ Download CSV",
+ "⬇ CSV: municípios": "⬇ CSV: municipalities",
+ "⬇ CSV: segmentos e grupos": "⬇ CSV: segments and groups"
 };

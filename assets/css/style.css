@@ -356,3 +356,5 @@ html.apresentacao { font-size: 118%; }
 .dica .dica-dl dt { color: var(--texto-2); }
 .dica .dica-dl dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 .dica .dica-dl .dl-inteira { grid-column: 1 / -1; font-weight: 400; }
+.botoes-csv { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.botoes-csv .btn { font-size: .8rem; padding: 6px 10px; }
