@@ -277,6 +277,8 @@ window.I18N_EN = {
  "Químicos orgânicos": "Organic chemicals",
  "Ranking": "Ranking",
  "Reino Unido": "United Kingdom",
+ "Rodovia estadual": "State highway",
+ "Rodovia federal": "Federal highway",
  "Rodovias estaduais (2021)": "State highways (2021)",
  "Rodovias federais (SNV)": "Federal highways (SNV)",
  "Rodoviária": "Road",

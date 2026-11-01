@@ -131,11 +131,12 @@
       const i = rodInfo && rodInfo.rodovias[cod];
       if (!i) return `<b>${cod || t(padrao)}</b><br>${sup || ""}`;
       const n = v => v == null ? "—" : U.int(v);
+      const linha = (r, v) => `<dt>${r}</dt><dd>${v}</dd>`;
       const sin = i.esfera === "Federal"
-        ? `<tr><td>${t("Sinistros em 2025")}</td><td>${n(i.sin25)}</td></tr><tr><td>${t("Mortos em 2025")}</td><td>${n(i.mor25)}</td></tr><tr><td>${t("Feridos em 2025")}</td><td>${n(i.fer25)}</td></tr>`
-        : `<tr><td colspan="2" class="sem-valor">${t("Sem dados abertos de sinistros para rodovias estaduais (a PRF só atua nas BRs).")}</td></tr>`;
+        ? linha(t("Sinistros em 2025"), n(i.sin25)) + linha(t("Mortos em 2025"), n(i.mor25)) + linha(t("Feridos em 2025"), n(i.fer25))
+        : `<dd class="sem-valor dl-inteira">${t("Sem dados abertos de sinistros para rodovias estaduais (a PRF só atua nas BRs).")}</dd>`;
       return `<b class="dica-t">${i.nome}</b><span class="dica-s">${t(i.esfera === "Federal" ? "Rodovia federal" : "Rodovia estadual")} · ${i.km != null ? U.int(i.km) + " km " + t("na Bahia") : ""}</span>
-        <table>${sin}<tr><td>${t("Pista")}</td><td>${i.pista}</td></tr><tr><td>${t("Estado geral (CNT)")}</td><td>${i.cnt}</td></tr><tr><td>${t("Pavimento (CNT)")}</td><td>${i.pavimento}</td></tr></table>
+        <dl class="dica-dl">${sin}${linha(t("Pista"), i.pista)}${linha(t("Estado geral (CNT)"), i.cnt)}${linha(t("Pavimento (CNT)"), i.pavimento)}</dl>
         <span class="dica-s">${t("Corredor:")} ${i.corredor}</span><span class="dica-s">${t("Fonte: planilha de conectividade (aba 3) – PRF, DNIT/SNV, CNT, SEINFRA-BA.")}</span>`;
     };
     linhas("rodest", rodest, p => dicaRod(p.Codigo_Rod ? "BA-" + p.Codigo_Rod : "", "Rodovia estadual", p.Superficie));
