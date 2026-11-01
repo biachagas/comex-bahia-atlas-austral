@@ -45,7 +45,13 @@
         </div>
         <div class="col-graficos">
           <figure class="cartao"><figcaption class="cartao-cab"><h3 id="s-tit-seg">${t("Segmentos")}</h3></figcaption>
-            <div id="s-seg" class="grafico"></div><p class="fonte">${F}</p></figure>
+            <div id="s-seg" class="grafico"></div>
+            <div class="botoes-csv">
+              <button type="button" class="btn" id="s-csv-seg">${t("⬇ CSV: segmentos e grupos")}</button>
+              <button type="button" class="btn" id="s-csv-mun">${t("⬇ CSV: municípios")}</button>
+            </div>
+            <p class="nota">${t("Os arquivos trazem o ano e o fluxo escolhidos. Abrem direto no Excel.")}</p>
+            <p class="fonte">${F}</p></figure>
           <figure class="cartao"><figcaption class="cartao-cab"><h3 id="s-tit-prod">${t("Produtos")}</h3></figcaption>
             <div id="s-prod" class="grafico"></div><p class="nota" id="s-nota-prod"></p>
             <details class="lista-seg"><summary>${t("Ver todos os segmentos por grupo")}</summary>
@@ -108,6 +114,34 @@
     };
     $("s-busca").addEventListener("change", buscar);
     $("s-busca").addEventListener("keydown", e => { if (e.key === "Enter") buscar(e); });
+
+    // ---------- downloads (ano e fluxo escolhidos) ----------
+    const en = I18N.lang === "en";
+    $("s-csv-seg").addEventListener("click", () => {
+      const rot = U.rotuloAno(st.ano, meta), fl = U.nomeFluxo[st.fluxo];
+      const linhas = [];
+      dados.grupos.forEach(([g, tg]) => {
+        if (!tg) return;
+        const segs = dados.segmentos.filter(x => x[3] === g);
+        segs.forEach(([n, v]) => linhas.push([rot, fl, G[g], t(n), U.numCSV(v), U.pctCSV(v / dados.total * 100), U.pctCSV(v / tg * 100)]));
+        const resto = tg - d3.sum(segs, x => x[1]);
+        if (resto > 0) linhas.push([rot, fl, G[g], t("Demais produtos (classificados pelo capítulo SH2)"), U.numCSV(resto), U.pctCSV(resto / dados.total * 100), U.pctCSV(resto / tg * 100)]);
+      });
+      const cab = en ? ["year", "flow", "group", "segment", "value_usd_fob", "share_of_total_pct", "share_of_group_pct"]
+                     : ["ano", "fluxo", "grupo", "segmento", "valor_usd_fob", "participacao_total_pct", "participacao_grupo_pct"];
+      U.baixarCSV(`atlas-austral_segmentos_${st.fluxo}_${st.ano}.csv`, cab, linhas);
+    });
+    $("s-csv-mun").addEventListener("click", () => {
+      const rot = U.rotuloAno(st.ano, meta), fl = U.nomeFluxo[st.fluxo];
+      const linhas = dados.mun.map(([cod, v, gd, top]) => {
+        const l = [cod, nomes[cod], rot, fl, U.numCSV(v), G[gd]];
+        for (let k = 0; k < 3; k++) { const x = top[k]; l.push(x ? G[x[0]] : "", x ? U.pctCSV(x[1]) : ""); }
+        return l;
+      });
+      const cab = en ? ["cod_mun", "municipality", "year", "flow", "value_usd_fob", "dominant_group", "group_1", "group_1_pct", "group_2", "group_2_pct", "group_3", "group_3_pct"]
+                     : ["cod_mun", "municipio", "ano", "fluxo", "valor_usd_fob", "grupo_dominante", "grupo_1", "grupo_1_pct", "grupo_2", "grupo_2_pct", "grupo_3", "grupo_3_pct"];
+      U.baixarCSV(`atlas-austral_segmentos_municipios_${st.fluxo}_${st.ano}.csv`, cab, linhas);
+    });
 
     function gravar() { U.gravarHash("segmentos", { ano: st.ano, fluxo: st.fluxo, grupo: st.grupo, mun: st.mun }); }
     function selecionar(cod) { st.mun = cod; gravar(); painelMun(); caminhos.classed("selecionado", d => d.properties.CD_MUN === st.mun); }
