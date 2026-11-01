@@ -7,7 +7,7 @@ Testes feitos no Chromium, com o site servido numa subpasta (`/comex-bahia-atlas
 - [x] As 4 páginas carregam em português e em inglês, em 1440 px (desktop), 900 px (tablet) e 390 px (celular), sem erros no console. Não foi possível testar os tiles CARTO e EOX, porque o ambiente de teste não tem acesso a eles.
 - [x] Página inicial carrega em cerca de 1,2–2,5 s no servidor local.
 - [x] Mapa do Território com os 417 municípios; a dica mostra o nome mesmo sem valor ("sem exportação no período").
-- [x] Busca de município, clique para fixar, troca de fluxo (incluindo Saldo), troca de ano e link com estado (`#territorio?ano=…&fluxo=…&mun=…`).
+- [x] Busca de município, clique para fixar, troca de fluxo (incluindo Saldo), troca de ano e link com estado (`#municipios?ano=…&fluxo=…&mun=…`).
 - [x] Segmentos: destaque de grupo esmaece os outros municípios; dica com os 3 principais grupos.
 - [x] Escoamento: satélite, camadas, Sankey no desktop e barras empilhadas no celular.
 - [x] Versão EN sem textos em português na interface (só nomes próprios).

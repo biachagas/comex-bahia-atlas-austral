@@ -142,13 +142,13 @@
     function selecionar(cod, enquadrar) {
       st.mun = cod;
       if (enquadrar && cod) mapa.enquadrar(geo.features.find(x => x.properties.CD_MUN === cod), true);
-      U.gravarHash("territorio", { ano: st.ano, fluxo: st.fluxo, mun: st.mun });
+      U.gravarHash("municipios", { ano: st.ano, fluxo: st.fluxo, mun: st.mun });
       desenharSelecao(); serie(); ranking(); tabela();
     }
 
     async function mudar(novo) {
       Object.assign(st, novo);
-      U.gravarHash("territorio", { ano: st.ano, fluxo: st.fluxo, mun: st.mun });
+      U.gravarHash("municipios", { ano: st.ano, fluxo: st.fluxo, mun: st.mun });
       raiz.querySelector(`input[name=t-fluxo][value=${st.fluxo}]`).checked = true;
       $("t-ano").value = st.ano;
       raiz.querySelector(".pg-territorio").classList.add("ocupado");

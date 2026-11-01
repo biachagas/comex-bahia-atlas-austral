@@ -75,3 +75,4 @@ Registro das escolhas feitas na construção do site (atualizado a cada etapa).
 - **Glossário:** mantido na página Metodologia (o público do evento pode não conhecer FOB, SH, URF), além do DICIONARIO_DADOS.md no repositório.
 
 - **Declaração de uso de IA** (01/11/2026): incluída na seção 9 da Metodologia (PT e EN) e no README, com a redação aprovada pela autora ("sob orientação, revisão e permissões da autora").
+- **Endereço da página Municípios** (01/11/2026): passa a ser `#municipios`; links antigos com `#territorio` são redirecionados automaticamente.
