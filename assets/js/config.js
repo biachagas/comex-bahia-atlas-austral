@@ -1,6 +1,6 @@
 /* =========================================================
    CONFIGURAÇÃO – é aqui que você edita rótulos, chave e cores.
-   (Atlas Austral – Comércio Exterior da Bahia)
+   (Comércio Exterior da Bahia – Atlas Austral)
    ========================================================= */
 window.ATLAS_CONFIG = {
   // Rótulos das abas (editáveis). A chave "territorio" é o rótulo da página Municípios (endereço #municipios).

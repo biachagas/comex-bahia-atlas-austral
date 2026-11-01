@@ -41,7 +41,7 @@
       on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
     });
     document.getElementById("titulo-pagina").textContent = p.rotulo();
-    document.title = `${p.rotulo()} · Atlas Austral – ${t("Comércio Exterior da Bahia")}`;
+    document.title = `${p.rotulo()} · ${t("Comércio Exterior da Bahia")} – Atlas Austral`;
     U.dica.esconder();
     conteudo.innerHTML = `<p class="carregando-pagina">${t("Carregando…")}</p>`;
     try { await p.montar(conteudo, params); }
