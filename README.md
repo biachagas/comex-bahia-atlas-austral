@@ -1,4 +1,4 @@
-# Atlas Austral – Comércio Exterior da Bahia
+# Comércio Exterior da Bahia – Atlas Austral
 
 Painel interativo das exportações e importações da Bahia (1997 a setembro de 2026), em quatro páginas: **Municípios**, **Escoamento** (vias e URFs, com diagrama de Sankey), **Segmentos** (grupos de produtos) e **Metodologia e Créditos**. Disponível em português e inglês (botão **PT | EN**).
 

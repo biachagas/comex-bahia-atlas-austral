@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Atlas Austral – Comércio Exterior da Bahia
+Comércio Exterior da Bahia – Atlas Austral
 Gera os JSONs pré-agregados do site a partir dos CSVs do Comex Stat.
 
 COMO USAR (no terminal, dentro da pasta do repositório):

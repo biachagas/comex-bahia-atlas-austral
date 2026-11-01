@@ -26,7 +26,7 @@
 
   const PT = (m) => `
     <h2 class="titulo-secao">Metodologia</h2>
-    <p class="lead">O Atlas Austral – Comércio Exterior da Bahia reúne, em mapas e gráficos, as exportações e importações da Bahia de ${m.anos[0]} a setembro de 2026, segundo três leituras: <b>Municípios</b> (onde estão as empresas), <b>Escoamento</b> (por onde a mercadoria sai ou entra) e <b>Segmentos</b> (o que é comercializado).</p>
+    <p class="lead">O painel Comércio Exterior da Bahia – Atlas Austral reúne, em mapas e gráficos, as exportações e importações da Bahia de ${m.anos[0]} a setembro de 2026, segundo três leituras: <b>Municípios</b> (onde estão as empresas), <b>Escoamento</b> (por onde a mercadoria sai ou entra) e <b>Segmentos</b> (o que é comercializado).</p>
 
     <h3>1. Fontes e período</h3>
     <ul>
@@ -92,7 +92,7 @@
 
   const EN = (m) => `
     <h2 class="titulo-secao">Methodology</h2>
-    <p class="lead">Atlas Austral – Bahia Foreign Trade brings together, in maps and charts, the exports and imports of the state of Bahia (Brazil) from ${m.anos[0]} to September 2026, through three lenses: <b>Municipalities</b> (where the companies are), <b>Shipping routes</b> (where goods leave or enter the country) and <b>Segments</b> (what is traded).</p>
+    <p class="lead">The Bahia Foreign Trade – Atlas Austral dashboard brings together, in maps and charts, the exports and imports of the state of Bahia (Brazil) from ${m.anos[0]} to September 2026, through three lenses: <b>Municipalities</b> (where the companies are), <b>Shipping routes</b> (where goods leave or enter the country) and <b>Segments</b> (what is traded).</p>
 
     <h3>1. Sources and period</h3>
     <ul>
@@ -214,7 +214,7 @@
     const d = new Date(), dd = d.getDate(), mm = d.getMonth(), aa = d.getFullYear();
     const mesAbnt = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."][mm];
     const iso = `${aa}-${String(mm + 1).padStart(2, "0")}-${String(dd).padStart(2, "0")}`;
-    const tit = "Atlas Austral – Comércio Exterior da Bahia";
+    const tit = "Comércio Exterior da Bahia – Atlas Austral";
     if (estilo === "apa") return `Chagas, B. G. F. de O., &amp; Oliveira, H. C. de. (2026). <i>${tit}</i> [${en ? "Interactive dashboard" : "Painel interativo"}]. PPDRU/UNIFACS. ${URL_SITE}`;
     if (estilo === "iso") return en
       ? `CHAGAS, Bianca Glória França de Oliveira and OLIVEIRA, Henrique Campos de. <i>${tit}</i> [online]. Salvador: PPDRU/UNIFACS, 2026 [viewed ${iso}]. Available from: ${URL_SITE}`
