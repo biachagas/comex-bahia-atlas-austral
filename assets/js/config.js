@@ -3,7 +3,7 @@
    (Atlas Austral – Comércio Exterior da Bahia)
    ========================================================= */
 window.ATLAS_CONFIG = {
-  // Rótulos das abas (editáveis). A página "territorio" mostra os municípios.
+  // Rótulos das abas (editáveis). A chave "territorio" é o rótulo da página Municípios (endereço #municipios).
   rotulos: {
     territorio: "Municípios",
     escoamento: "Escoamento",

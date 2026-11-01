@@ -2,7 +2,7 @@
 (function () {
   const R = ATLAS_CONFIG.rotulos;
   const PAGINAS = [
-    { id: "territorio", rotulo: () => t(R.territorio), montar: (el, p) => PaginaTerritorio.montar(el, p) },
+    { id: "municipios", rotulo: () => t(R.territorio), montar: (el, p) => PaginaTerritorio.montar(el, p) },
     { id: "escoamento", rotulo: () => t(R.escoamento), montar: (el, p) => PaginaEscoamento.montar(el, p) },
     { id: "segmentos", rotulo: () => t(R.segmentos), montar: (el, p) => PaginaSegmentos.montar(el, p) },
     { id: "metodologia", rotulo: () => t(R.metodologia), montar: (el, p) => PaginaMetodologia.montar(el, p) }

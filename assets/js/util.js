@@ -56,8 +56,9 @@
   // ---------- estado na URL: #pagina?ano=2025&fluxo=EXP ----------
   U.lerHash = () => {
     const h = location.hash.replace(/^#/, "");
-    const [pag, qs] = h.split("?");
-    return { pagina: pag || "territorio", params: Object.fromEntries(new URLSearchParams(qs || "")) };
+    let [pag, qs] = h.split("?");
+    if (pag === "territorio") pag = "municipios"; // endereço antigo continua funcionando
+    return { pagina: pag || "municipios", params: Object.fromEntries(new URLSearchParams(qs || "")) };
   };
   U.gravarHash = (pagina, params) => {
     params = Object.assign({}, params, { lang: I18N.lang === "en" ? "en" : null });
