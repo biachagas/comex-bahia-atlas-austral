@@ -43,9 +43,11 @@
 
   // ---------- carga de dados com cache ----------
   const cache = new Map();
+  // versão do painel (index.html, <meta name="versao">): faz o navegador baixar dados novos após cada publicação
+  const versao = (document.querySelector('meta[name="versao"]') || {}).content;
   U.json = url => {
     if (!cache.has(url)) {
-      cache.set(url, fetch(url).then(r => {
+      cache.set(url, fetch(versao ? url + (url.includes("?") ? "&" : "?") + "v=" + versao : url).then(r => {
         if (!r.ok) throw new Error(`Falha ao carregar ${url} (${r.status})`);
         return r.json();
       }).catch(e => { cache.delete(url); throw e; }));
