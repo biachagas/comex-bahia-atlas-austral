@@ -136,8 +136,8 @@
         ? linha(t("Sinistros em 2025"), n(i.sin25)) + linha(t("Mortos em 2025"), n(i.mor25)) + linha(t("Feridos em 2025"), n(i.fer25))
         : `<dd class="sem-valor dl-inteira">${t("Sem dados abertos de sinistros para rodovias estaduais (a PRF só atua nas BRs).")}</dd>`;
       return `<b class="dica-t">${i.nome}</b><span class="dica-s">${t(i.esfera === "Federal" ? "Rodovia federal" : "Rodovia estadual")} · ${i.km != null ? U.int(i.km) + " km " + t("na Bahia") : ""}</span>
-        <dl class="dica-dl">${sin}${linha(t("Pista"), i.pista)}${linha(t("Estado geral (CNT)"), i.cnt)}${linha(t("Pavimento (CNT)"), i.pavimento)}</dl>
-        <span class="dica-s">${t("Corredor:")} ${i.corredor}</span><span class="dica-s">${t("Fonte: planilha de conectividade (aba 3) – PRF, DNIT/SNV, CNT, SEINFRA-BA.")}</span>`;
+        <dl class="dica-dl">${sin}${linha(t("Pista"), t(i.pista))}${linha(t("Estado geral (CNT)"), t(i.cnt))}${linha(t("Pavimento (CNT)"), t(i.pavimento))}</dl>
+        <span class="dica-s">${t("Corredor:")} ${t(i.corredor)}</span><span class="dica-s">${I18N.lang === "en" ? t("Fonte: planilha de conectividade (aba 3) – PRF, DNIT/SNV, CNT, SEINFRA-BA. Descrições traduzidas do português.") : t("Fonte: planilha de conectividade (aba 3) – PRF, DNIT/SNV, CNT, SEINFRA-BA.")}</span>`;
     };
     linhas("rodest", rodest, p => dicaRod(p.Codigo_Rod ? "BA-" + p.Codigo_Rod : "", "Rodovia estadual", p.Superficie));
     linhas("rodfed", rodfed, p => dicaRod(p.Codigo_BR ? "BR-" + p.Codigo_BR : "", "Rodovia federal", p.Superficie));
