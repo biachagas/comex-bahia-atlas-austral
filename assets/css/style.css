@@ -350,3 +350,9 @@ html.apresentacao { font-size: 118%; }
 .tabela-mini { font-size: .8rem; }
 .tabela-mini thead th { padding: 6px 8px; font-size: .76rem; }
 .tabela-mini tbody th, .tabela-mini td { padding: 4px 8px; }
+/* dica das rodovias: rótulo e valor em duas colunas, com quebra de linha */
+.dica { overflow-wrap: break-word; }
+.dica .dica-dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 3px 12px; margin: 6px 0; }
+.dica .dica-dl dt { color: var(--texto-2); }
+.dica .dica-dl dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.dica .dica-dl .dl-inteira { grid-column: 1 / -1; font-weight: 400; }
