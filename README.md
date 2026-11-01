@@ -6,6 +6,7 @@ Painel interativo das exportações e importações da Bahia (1997 a setembro de
 
 Elaboração: Bianca Glória França de Oliveira Chagas (PPDRU/UNIFACS, bolsista CAPES/PROSUP). Idealização e orientação: Prof. Dr. Henrique Campos de Oliveira.
 Fonte dos dados: Comex Stat (MDIC/SECEX). O site é estático: não usa banco de dados, cookies nem serviços de análise de acesso.
+Código e interface desenvolvidos com apoio do assistente de IA Claude (Anthropic), sob orientação, revisão e permissões da autora.
 
 ---
 

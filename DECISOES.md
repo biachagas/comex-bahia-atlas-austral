@@ -73,3 +73,5 @@ Registro das escolhas feitas na construção do site (atualizado a cada etapa).
 - **Como citar:** lista suspensa com ABNT (NBR 6023), APA (7ª ed.) e ISO 690, com botão para copiar. A data de acesso é a do dia da consulta.
 - **Tratamento:** registrado como "Power Query do Power BI". Extração dos dados: outubro de 2026 (confirmado).
 - **Glossário:** mantido na página Metodologia (o público do evento pode não conhecer FOB, SH, URF), além do DICIONARIO_DADOS.md no repositório.
+
+- **Declaração de uso de IA** (01/11/2026): incluída na seção 9 da Metodologia (PT e EN) e no README, com a redação aprovada pela autora ("sob orientação, revisão e permissões da autora").
