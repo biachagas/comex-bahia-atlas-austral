@@ -1,0 +1,5 @@
+# Dados brutos ficam FORA do site (são grandes e não precisam ser publicados)
+dados_brutos/
+*.xlsx
+__pycache__/
+.DS_Store

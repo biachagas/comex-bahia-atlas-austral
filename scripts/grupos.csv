@@ -1,0 +1,40 @@
+tipo;chave;grupo
+segmento;Soja em grão;Grãos, oleaginosas e fibras
+segmento;Farelo e tortas de soja;Grãos, oleaginosas e fibras
+segmento;Algodão;Grãos, oleaginosas e fibras
+segmento;Cacau e derivados;Agro tropical e alimentos
+segmento;Café;Agro tropical e alimentos
+segmento;Frutas;Agro tropical e alimentos
+segmento;Tabaco;Agro tropical e alimentos
+segmento;Petróleo bruto;Petróleo e combustíveis
+segmento;Derivados de petróleo;Petróleo e combustíveis
+segmento;Consumo de bordo;Petróleo e combustíveis
+segmento;Químicos orgânicos;Química e petroquímica
+segmento;Hidrocarbonetos;Química e petroquímica
+segmento;Éteres e álcoois;Química e petroquímica
+segmento;Polímeros e plásticos;Química e petroquímica
+segmento;Químicos inorgânicos e diversos;Química e petroquímica
+segmento;Celulose;Celulose e papel
+segmento;Papel e cartão;Celulose e papel
+segmento;Cobre;Minerais e metais
+segmento;Níquel;Minerais e metais
+segmento;Ferro-ligas;Minerais e metais
+segmento;Minerais não metálicos;Minerais e metais
+segmento;Ouro;Minerais e metais
+segmento;Metais preciosos (resíduos);Minerais e metais
+segmento;Máquinas e equipamentos;Máquinas, veículos e borracha
+segmento;Automotivo;Máquinas, veículos e borracha
+segmento;Pneus e borracha;Máquinas, veículos e borracha
+segmento;Couros;Couro, têxteis e calçados
+segmento;Têxteis e fibras;Couro, têxteis e calçados
+segmento;Calçados;Couro, têxteis e calçados
+sh2;01-09,11,13-14,16-22,24;Agro tropical e alimentos
+sh2;10,12,15,23;Grãos, oleaginosas e fibras
+sh2;25-26,68-83;Minerais e metais
+sh2;27;Petróleo e combustíveis
+sh2;28-30,32-39;Química e petroquímica
+sh2;31;Fertilizantes
+sh2;40,84-92;Máquinas, veículos e borracha
+sh2;41-43,50-67;Couro, têxteis e calçados
+sh2;47-49;Celulose e papel
+sh2;44-46,93-99;Outros
