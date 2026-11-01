@@ -101,7 +101,7 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 .mapa svg { display: block; cursor: grab; }
 .mapa svg:active { cursor: grabbing; }
 .mapa .tiles image { pointer-events: none; }
-.mapa path.mun { stroke: #fff; stroke-width: .6; vector-effect: non-scaling-stroke; fill-opacity: .93; cursor: pointer; transition: fill .25s; }
+.mapa path.mun { stroke: #CDBFAA; stroke-width: .7; vector-effect: non-scaling-stroke; fill-opacity: .93; cursor: pointer; transition: fill .25s; }
 .mapa path.mun.hover { stroke: var(--navy); stroke-width: 1.6; }
 .mapa path.mun.selecionado { stroke: var(--navy); stroke-width: 2.8; }
 .mapa path.contorno { fill: none; stroke: var(--navy); stroke-width: 1.3; vector-effect: non-scaling-stroke; pointer-events: none; }
