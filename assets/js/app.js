@@ -75,6 +75,14 @@
     if (!document.fullscreenElement && document.documentElement.classList.contains("apresentacao")) bA.click();
   });
 
+  // Menu de acessibilidade: ao mudar o tamanho do texto, redesenha a página (os gráficos medem os rótulos)
+  document.addEventListener("atlas-a11y", async ev => {
+    if (!["escala", "restaurar"].includes(ev.detail.mudou)) return;
+    const y = window.scrollY;
+    await rotear(true);
+    window.scrollTo(0, y);
+  });
+
   I18N.definir(U.lerHash().params.lang === "en" ? "en" : "pt");
   rotear(true);
 })();

@@ -15,8 +15,9 @@ Código e interface desenvolvidos com apoio do assistente de IA Claude (Anthropi
 | Pasta / arquivo | Para que serve |
 |---|---|
 | `index.html` | A página que o navegador abre. |
-| `assets/css/` | Cores, fontes e layout. |
+| `assets/css/` | Cores, fontes e layout. `acessibilidade.css` tem os estilos do menu de acessibilidade. |
 | `assets/js/` | Funcionamento do site. **`config.js` é o único arquivo que você deve precisar editar** (rótulos das abas, textos dos rodapés, chave do mapa de fundo). |
+| `assets/js/acessibilidade.js` | Menu de acessibilidade (componente independente, reaproveitável no site do Atlas Austral). |
 | `assets/js/i18n-en.js` | Traduções para o inglês. Para corrigir uma tradução, mude o texto à direita dos dois-pontos. |
 | `assets/lib/` | Bibliotecas d3 e d3-sankey (ficam dentro do site; não precisa de internet para elas). |
 | `assets/img/` | Logos e ícone do site. |
@@ -112,6 +113,16 @@ O progresso da publicação aparece na aba **Actions** do repositório (círculo
 
 ---
 
-## 7. Licenças e créditos de terceiros
+## 7. Menu de acessibilidade
+
+**Para quem visita:** o botão com o ícone de acessibilidade, ao lado do **PT | EN**, abre um painel com: aumentar e diminuir texto (87,5% a 150%), alto contraste, modo escuro, tons de cinza, destacar links, destacar títulos, cursor grande, pausar animações e restaurar padrão. Funciona com teclado (Tab, Enter/Espaço, **Esc** fecha). As escolhas ficam só no navegador da pessoa e valem também no site do Atlas Austral (mesmo endereço `biachagas.github.io`).
+
+**Para quem mantém o código:**
+- `assets/js/acessibilidade.js` + `assets/css/acessibilidade.css` não dependem das páginas do painel. Para usar em outro site: carregar os dois arquivos; o botão entra antes de um `#btn-idioma` ou dentro de um elemento com `data-a11y-botao`.
+- As escolhas ficam no `localStorage`, chave `atlas-austral-a11y`. As opções viram classes no `<html>` (`a11y-contraste`, `a11y-escuro`, `a11y-cinza`, `a11y-links`, `a11y-titulos`, `a11y-cursor`, `a11y-sem-animacao`) e a variável CSS `--a11y-escala`.
+- Ao mudar algo, o menu dispara o evento `atlas-a11y` em `document`. O painel usa isso para redesenhar os gráficos quando o texto muda de tamanho e para parar o **Play**.
+- Textos do menu passam por `t()`; traduções em `i18n-en.js`.
+
+## 8. Licenças e créditos de terceiros
 
 D3.js (ISC) e d3-sankey (BSD-3), arquivos de licença em `assets/lib/`. Mapas: © OpenStreetMap contributors, © CARTO; Sentinel-2 cloudless by EOX IT Services GmbH (CC BY-NC-SA 4.0); IBGE; DNIT/VGEO, ANAC, ANTAQ. Logos UNIFACS, Ânima, PPDRU e CAPES usadas com autorização, sem alteração de cores ou proporções.

@@ -346,7 +346,7 @@
       const el = $("e-desemb");
       if (st.fluxo !== "EXP") { el.innerHTML = `<p class="grafico-vazio">${t("Disponível só para a exportação (a planilha trata apenas de embarques marítimos de exportação).")}</p>`; $("e-leg-desemb").innerHTML = ""; return; }
       const cores = { local: "#A83F12", fora: "#F8C9A0" };
-      const W = U.largura(el), H = 200, m = { t: 10, r: 8, b: 24, l: 48 };
+      const W = U.largura(el), s = U.escalaTexto(), H = Math.round(200 * Math.sqrt(s)), m = { t: 10, r: 8, b: 24 * s, l: 48 * s };
       const anos = desemb.anos.map(a => a.ano);
       const x = d3.scaleBand().domain(anos).range([m.l, W - m.r]).paddingInner(0.3);
       const x2 = d3.scaleBand().domain(["local", "fora"]).range([0, x.bandwidth()]).paddingInner(0.08);
