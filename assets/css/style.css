@@ -10,14 +10,13 @@
   --f-texto: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 * { box-sizing: border-box; }
-html { font-size: 100%; }
 body { margin: 0; background: var(--areia); color: var(--texto); font: 0.9375rem/1.45 var(--f-texto); -webkit-font-smoothing: antialiased; }
 h1, h2, h3 { font-family: var(--f-titulo); font-weight: 700; margin: 0; }
 a { color: var(--imp-esc); }
 button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--exp); outline-offset: 2px; border-radius: 3px; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.pular { position: absolute; left: -999px; top: 8px; background: #fff; padding: 8px 12px; z-index: 2000; border-radius: 6px; }
+.pular { position: absolute; left: -999px; top: 8px; background: #fff; color: var(--navy); font-weight: 600; padding: 8px 12px; z-index: 2000; border-radius: 6px; }
 .pular:focus { left: 8px; }
 
 /* ---------- cabeçalho ---------- */
@@ -36,7 +35,7 @@ button, input, select { font: inherit; color: inherit; }
 .btn-claro { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); }
 .btn-claro:hover { background: rgba(255,255,255,.22); }
 .btn-claro:focus-visible { outline-color: #fff; }
-.btn-link { background: none; border: 0; padding: 0; color: var(--imp-esc); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; font-size: inherit; text-align: left; }
+.btn-link { background: none; border: 0; padding: 0; color: var(--navy); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; font-size: inherit; text-align: left; }
 
 /* ---------- página ---------- */
 main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: none; }
@@ -79,7 +78,8 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 .opcao-saldo span::before { background: linear-gradient(90deg, var(--imp) 50%, #D2476F 50%); }
 .campo { display: flex; flex-direction: column; gap: 4px; font-weight: 700; font-size: .85rem; }
 .campo select, .campo input { font-weight: 400; padding: 7px 9px; border: 1.5px solid var(--linha); border-radius: 7px; background: #fff; min-width: 0; }
-.campo-linha { flex-direction: row; align-items: center; gap: 8px; }
+.campo-linha { flex-direction: row; align-items: center; gap: 8px; flex-wrap: wrap; max-width: 100%; }
+.campo-linha input { flex: 1 1 10em; min-width: 0; }
 .selecionado:empty { display: none; }
 .selecionado { background: #FBF7F0; border: 1.5px solid var(--navy); border-radius: 8px; padding: 8px 10px; font-size: .84rem; }
 .sel-cab { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; margin-bottom: 4px; }
@@ -160,7 +160,7 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 .tabela tbody tr:nth-child(even) { background: #FCFAF6; }
 .tabela tbody tr:hover { background: #FBF3E6; }
 .tabela tbody tr.destaque { background: #FDEBDD; }
-.tabela td.neg { color: var(--imp-esc); }
+.tabela td.neg { color: var(--navy); } /* Navy (16,8:1) em vez de verde-água escuro (4,0:1); o sinal − indica o saldo negativo */
 .tabela td.pos { color: var(--exp-esc); }
 
 /* ---------- dica ---------- */
@@ -210,7 +210,7 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 }
 
 /* ---------- modo apresentação (projetor) ---------- */
-html.apresentacao { font-size: 118%; }
+/* tamanho do texto no modo apresentação: ver acessibilidade.css (118% × escala escolhida) */
 .apresentacao .kpi-v { font-size: 2.2rem; }
 .apresentacao .cartao-cab h3 { font-size: 1.2rem; }
 .apresentacao .area-mapa { height: 72vh; }
@@ -307,6 +307,7 @@ html.apresentacao { font-size: 118%; }
 .faixa-logos .logo-unifacs { width: 230px; }
 .faixa-logos .logo-anima { width: 92px; }
 .faixa-logos .logo-capes { width: 380px; } /* mínimo do Manual de Identidade Visual da CAPES (p. 7): 380×70 px na versão horizontal */
+@media (max-width: 1023px) { .faixa-logos { margin-left: -12px; margin-right: -12px; } } /* acompanha o recuo do main (antes passava 8 px da tela entre 641 e 1023 px) */
 @media (max-width: 640px) {
   .faixa-logos { margin: 6px -12px 0; gap: 16px 28px; }
   .faixa-logos .logo-capes { width: 100%; max-width: 380px; }

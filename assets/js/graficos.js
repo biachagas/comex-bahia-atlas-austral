@@ -14,7 +14,7 @@
     if (d.mensagem) return vazio(el, d.mensagem);
     const itens = d.itens;
     if (!itens.length) return vazio(el, t("Sem valores neste ano."));
-    const W = U.largura(el), lh = 22, m = { t: 4, r: 64, b: 22, l: Math.min(150, W * 0.38) };
+    const W = U.largura(el), s = U.escalaTexto(), lh = 22 * s, m = { t: 4, r: 64 * s, b: 22 * s, l: Math.min(150 * s, W * (s > 1 ? 0.45 : 0.38)) };
     const H = m.t + m.b + itens.length * lh;
     const min = Math.min(0, d3.min(itens, i => i.valor)), max = Math.max(0, d3.max(itens, i => i.valor));
     const x = d3.scaleLinear().domain([min, max]).nice(4).range([m.l, W - m.r]);
@@ -45,7 +45,7 @@
 
   /* Série histórica. d = {anos, meta, anoAtivo, linhas:[{nome, cor, valores}], barras:[valores] (saldo)} */
   G.serie = (el) => responsivo(el, d => {
-    const W = U.largura(el), H = 210, m = { t: 12, r: 12, b: 24, l: 52 };
+    const W = U.largura(el), s = U.escalaTexto(), H = Math.round(210 * Math.sqrt(s)), m = { t: 12, r: 12, b: 24 * s, l: 52 * s };
     const { anos, meta } = d;
     const todos = [...(d.linhas || []).flatMap(l => l.valores), ...(d.barras || [])];
     if (!todos.some(v => v)) return vazio(el, t("Sem valores no período."));
@@ -97,7 +97,7 @@
     if (d.mensagem) return vazio(el, d.mensagem);
     const conc = d.conc;
     if (!conc.length) return vazio(el, t("Sem valores neste ano."));
-    const W = U.largura(el), H = 190, m = { t: 10, r: 14, b: 32, l: 40 };
+    const W = U.largura(el), s = U.escalaTexto(), H = Math.round(190 * Math.sqrt(s)), m = { t: 10, r: 14, b: 32 * s, l: 40 * s };
     const x = d3.scaleLinear().domain([0, conc.length]).range([m.l, W - m.r]);
     const y = d3.scaleLinear().domain([0, 100]).range([H - m.b, m.t]);
     el.innerHTML = "";
@@ -124,7 +124,7 @@
 
   /* Barras empilhadas 100% por ano. d = {anos, meta, anoAtivo, series:[{nome, cor, valores[]}]} */
   G.empilhado100 = (el, opc = {}) => responsivo(el, d => {
-    const W = U.largura(el), H = 230, m = { t: 8, r: 8, b: 24, l: 40 };
+    const W = U.largura(el), s = U.escalaTexto(), H = Math.round(230 * Math.sqrt(s)), m = { t: 8, r: 8, b: 24 * s, l: 40 * s };
     const { anos, meta } = d;
     const tot = anos.map((_, i) => d3.sum(d.series, s => s.valores[i]));
     const x = d3.scaleBand().domain(anos).range([m.l, W - m.r]).paddingInner(0.12);
@@ -156,7 +156,7 @@
 
   /* Várias linhas no tempo. d = {anos, meta, anoAtivo, linhas:[{nome, cor, valores}]} */
   G.linhas = (el) => responsivo(el, d => {
-    const W = U.largura(el), H = 220, m = { t: 12, r: 12, b: 24, l: 52 };
+    const W = U.largura(el), s = U.escalaTexto(), H = Math.round(220 * Math.sqrt(s)), m = { t: 12, r: 12, b: 24 * s, l: 52 * s };
     const { anos, meta } = d;
     const todos = d.linhas.flatMap(l => l.valores);
     if (!todos.some(v => v)) return vazio(el, t("Sem valores no período."));
@@ -225,7 +225,7 @@
 
   /* Barras empilhadas horizontais (alternativa ao Sankey no celular). d = {linhas:[{rotulo, partes:[{nome, cor, v}]}], legenda:[{nome, cor}]} */
   G.empilhadoH = (el) => responsivo(el, d => {
-    const W = U.largura(el), lh = 24, m = { t: 4, r: 10, b: 22, l: Math.min(140, W * 0.36) };
+    const W = U.largura(el), s = U.escalaTexto(), lh = 24 * s, m = { t: 4, r: 10, b: 22 * s, l: Math.min(140 * s, W * (s > 1 ? 0.45 : 0.36)) };
     const H = m.t + m.b + d.linhas.length * lh;
     const max = d3.max(d.linhas, l => d3.sum(l.partes, p => p.v));
     const x = d3.scaleLinear().domain([0, max]).nice(3).range([m.l, W - m.r]);

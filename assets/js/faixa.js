@@ -15,8 +15,15 @@
     let dados = null, ano = null, timer = null;
 
     function parar() { clearInterval(timer); timer = null; btnPlay.textContent = "▶ Play"; btnPlay.setAttribute("aria-pressed", "false"); }
+    // "Pausar animações" (menu de acessibilidade) interrompe o Play em andamento
+    const aoA11y = ev => {
+      if (!el.isConnected) return document.removeEventListener("atlas-a11y", aoA11y);
+      if (ev.detail.estado.semAnimacao && timer) parar();
+    };
+    document.addEventListener("atlas-a11y", aoA11y);
     btnPlay.addEventListener("click", () => {
       if (timer) return parar();
+      if (U.semAnimacao()) return;
       btnPlay.textContent = "❚❚ " + t("Pausar"); btnPlay.setAttribute("aria-pressed", "true");
       const anos = dados.anos;
       let i = anos.indexOf(ano);
@@ -34,7 +41,7 @@
       if (!dados) return;
       const { anos, valores, parcial, cor, titulo } = dados;
       el.querySelector(".faixa-titulo").textContent = titulo;
-      const W = U.largura(box), H = 96, m = { t: 6, r: 4, b: 18, l: 42 };
+      const W = U.largura(box), s = U.escalaTexto(), H = Math.round(96 * Math.sqrt(s)), m = { t: 6, r: 4, b: 18 * s, l: 42 * s };
       const x = d3.scaleBand().domain(anos).range([m.l, W - m.r]).paddingInner(0.18);
       const vs = anos.map(a => valores[a] || 0);
       const y = d3.scaleLinear().domain([Math.min(0, d3.min(vs)), Math.max(0, d3.max(vs))]).nice().range([H - m.b, m.t]);

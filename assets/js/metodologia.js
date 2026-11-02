@@ -86,7 +86,7 @@
       <li><b>Limites e malhas:</b> IBGE. <b>Infraestrutura:</b> DNIT/VGEO, ANAC, ANTAQ, SNV.</li>
       <li>Sem internet, o painel continua funcionando só com os contornos e as camadas próprias.</li>
       <li><b>Tipografia:</b> Georgia (títulos) e Segoe UI (texto), com alternativas do sistema.</li>
-      <li><b>Software:</b> D3.js 7.9 (licença ISC) e d3-sankey 0.12 (licença BSD-3), incluídos no próprio site. Sem cookies e sem coleta de dados de navegação.</li>
+      <li><b>Software:</b> D3.js 7.9 (licença ISC) e d3-sankey 0.12 (licença BSD-3), incluídos no próprio site. Sem cookies e sem coleta de dados de navegação. As preferências do menu de acessibilidade ficam só no navegador da pessoa (armazenamento local) e não são enviadas a lugar nenhum.</li>
       <li><b>Uso de inteligência artificial:</b> o código e a interface do painel foram desenvolvidos com apoio do assistente de IA Claude (Anthropic), sob orientação, revisão e permissões da autora. A seleção e o tratamento dos dados, as escolhas metodológicas e a conferência dos números são de responsabilidade da autora.</li>
     </ul>`;
 
@@ -152,7 +152,7 @@
       <li><b>Boundaries:</b> IBGE. <b>Infrastructure:</b> DNIT/VGEO, ANAC, ANTAQ, SNV.</li>
       <li>Without internet access, the dashboard keeps working with its own boundaries and layers.</li>
       <li><b>Typography:</b> Georgia (headings) and Segoe UI (text), with system fallbacks.</li>
-      <li><b>Software:</b> D3.js 7.9 (ISC licence) and d3-sankey 0.12 (BSD-3 licence), bundled with the site. No cookies and no browsing-data collection.</li>
+      <li><b>Software:</b> D3.js 7.9 (ISC licence) and d3-sankey 0.12 (BSD-3 licence), bundled with the site. No cookies and no browsing-data collection. Accessibility-menu preferences stay only in the visitor's browser (local storage) and are never sent anywhere.</li>
       <li>Municipality and customs-unit names are proper names and are kept in Portuguese.</li>
       <li><b>Use of artificial intelligence:</b> the dashboard's code and interface were developed with the support of the AI assistant Claude (Anthropic), under the author's guidance, review and permissions. Data selection and processing, methodological choices and the checking of figures are the author's responsibility.</li>
     </ul>`;

@@ -41,6 +41,13 @@
   U.data = iso => new Date(iso + "T12:00").toLocaleDateString(I18N.lang === "en" ? "en-GB" : "pt-BR");
   U.atualizado = meta => t`Dados atualizados em ${U.data(meta.gerado_em)} · Comex Stat até setembro de 2026.`;
 
+  // animações desligadas pelo menu de acessibilidade ou pelo sistema
+  U.semAnimacao = () => document.documentElement.classList.contains("a11y-sem-animacao") ||
+    (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  U.duracao = ms => (U.semAnimacao() ? 0 : ms);
+  // fator do tamanho do texto (menu de acessibilidade / modo apresentação): os gráficos abrem espaço para rótulos maiores
+  U.escalaTexto = () => (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16) / 16;
+
   // ---------- carga de dados com cache ----------
   const cache = new Map();
   // versão do painel (index.html, <meta name="versao">): faz o navegador baixar dados novos após cada publicação

@@ -18,8 +18,8 @@
     const ui = d3.select(el);
     const ctrl = ui.append("div").attr("class", "mapa-ctrl");
     const btn = (txt, tit, fn) => ctrl.append("button").attr("type", "button").attr("title", tit).attr("aria-label", tit).text(txt).on("click", fn);
-    btn("+", t("Aproximar"), () => svg.transition().duration(250).call(zoom.scaleBy, 1.6));
-    btn("−", t("Afastar"), () => svg.transition().duration(250).call(zoom.scaleBy, 1 / 1.6));
+    btn("+", t("Aproximar"), () => svg.transition().duration(U.duracao(250)).call(zoom.scaleBy, 1.6));
+    btn("−", t("Afastar"), () => svg.transition().duration(U.duracao(250)).call(zoom.scaleBy, 1 / 1.6));
     btn("⌂", t("Enquadrar a Bahia"), () => api.enquadrar(null, true));
     const bLeg = btn("☰", t("Mostrar ou esconder a legenda"), () => {
       const fechada = el.classList.toggle("legenda-fechada");
@@ -107,7 +107,7 @@
         const k = Math.min(2 ** o.maxZoom, pad * Math.min(W / dx, H / dy));
         const cx = (b[0][0] + b[1][0]) / 2, cy = (b[0][1] + b[1][1]) / 2;
         const nt = d3.zoomIdentity.translate(W / 2 - k * cx, H / 2 - k * cy).scale(k);
-        (animar ? svg.transition().duration(400) : svg).call(zoom.transform, nt);
+        (animar && !U.semAnimacao() ? svg.transition().duration(400) : svg).call(zoom.transform, nt);
       },
       redimensionar() { medir(); desenhar(); }
     };
