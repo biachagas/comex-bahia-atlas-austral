@@ -88,6 +88,14 @@
       <li><b>Tipografia:</b> Georgia (títulos) e Segoe UI (texto), com alternativas do sistema.</li>
       <li><b>Software:</b> D3.js 7.9 (licença ISC) e d3-sankey 0.12 (licença BSD-3), incluídos no próprio site. Sem cookies e sem coleta de dados de navegação. As preferências do menu de acessibilidade ficam só no navegador da pessoa (armazenamento local) e não são enviadas a lugar nenhum.</li>
       <li><b>Uso de inteligência artificial:</b> o código e a interface do painel foram desenvolvidos com apoio do assistente de IA Claude (Anthropic), sob orientação, revisão e permissões da autora. A seleção e o tratamento dos dados, as escolhas metodológicas e a conferência dos números são de responsabilidade da autora.</li>
+    </ul>
+    <h3>10. Licenças</h3>
+    <ul>
+      <li><b>Código do painel:</b> licença <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>. Qualquer pessoa pode reaproveitar, desde que mantenha o nome da autora.</li>
+      <li><b>Dados tratados, mapas e gráficos</b> (inclusive os CSVs baixados aqui): licença <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br" target="_blank" rel="noopener">CC BY-NC 4.0</a>. Podem ser reaproveitados com crédito (veja "Como citar"), mas não para fins comerciais.</li>
+      <li><b>Dados de terceiros</b> mantêm as licenças de origem: Comex Stat (dados públicos), IBGE, DNIT/VGEO, ANAC e ANTAQ; mapa de fundo © OpenStreetMap contributors e © CARTO; Sentinel-2 cloudless (EOX), CC BY-NC-SA 4.0, usado só como fundo e não redistribuído; D3.js (ISC) e d3-sankey (BSD-3).</li>
+      <li><b>Planilha da Usuport</b> (dados de rodovias e de desembaraço na página Escoamento): fica de fora da licença aberta.</li>
+      <li>Logos e marcas não estão incluídos nas licenças. Detalhes por arquivo: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
     </ul>`;
 
   const EN = (m) => `
@@ -155,6 +163,14 @@
       <li><b>Software:</b> D3.js 7.9 (ISC licence) and d3-sankey 0.12 (BSD-3 licence), bundled with the site. No cookies and no browsing-data collection. Accessibility-menu preferences stay only in the visitor's browser (local storage) and are never sent anywhere.</li>
       <li>Municipality and customs-unit names are proper names and are kept in Portuguese.</li>
       <li><b>Use of artificial intelligence:</b> the dashboard's code and interface were developed with the support of the AI assistant Claude (Anthropic), under the author's guidance, review and permissions. Data selection and processing, methodological choices and the checking of figures are the author's responsibility.</li>
+    </ul>
+    <h3>10. Licences</h3>
+    <ul>
+      <li><b>Dashboard code:</b> <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a> licence. Anyone may reuse it, as long as the author's name is kept.</li>
+      <li><b>Processed data, maps and charts</b> (including the CSV downloads): <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC 4.0</a>. They may be reused with credit (see "How to cite"), but not for commercial purposes.</li>
+      <li><b>Third-party data</b> keep their original licences: Comex Stat (public data), IBGE, DNIT/VGEO, ANAC and ANTAQ; basemap © OpenStreetMap contributors and © CARTO; Sentinel-2 cloudless (EOX), CC BY-NC-SA 4.0, used only as a background and not redistributed; D3.js (ISC) and d3-sankey (BSD-3).</li>
+      <li><b>Usuport spreadsheet</b> (road and customs-clearance data on the Shipping routes page): not covered by the open licence.</li>
+      <li>Logos and trademarks are not covered by any licence. File-by-file details: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
     </ul>`;
 
   function creditos(lang) {

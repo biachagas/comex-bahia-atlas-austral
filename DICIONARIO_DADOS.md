@@ -2,6 +2,8 @@
 
 Todas as **chaves são texto**, com zeros à esquerda: SH4 = 4 dígitos, SH2 = 2, `cod_via` = 2, `cod_urf` = 7, `cod_pais` = 3, `cod_mun` = 7. Valores em **US$ FOB** (inteiros), pesos em **kg**. Coordenadas em graus decimais (WGS84), com ponto decimal.
 
+**Licença dos arquivos de `data/`:** CC BY-NC 4.0, exceto `data/escoamento/desembaraco.json` e `data/geo/rodovias_info.json` (derivados da planilha da Usuport, fora da licença aberta). Os dados originais de terceiros mantêm as licenças de origem. Veja `LICENCAS.md`.
+
 ## 1. Arquivos de entrada (pasta `dados_brutos/`, fora do site)
 
 ### fato_municipio.csv – base **Território** (domicílio fiscal da empresa)

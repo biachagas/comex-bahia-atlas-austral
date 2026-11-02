@@ -12,7 +12,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--areia); color: var(--texto); font: 0.9375rem/1.45 var(--f-texto); -webkit-font-smoothing: antialiased; }
 h1, h2, h3 { font-family: var(--f-titulo); font-weight: 700; margin: 0; }
-a { color: var(--imp-esc); }
+a { color: var(--navy); text-underline-offset: 2px; } /* Navy: 16,8:1 (o verde-água escuro dava 4,0:1, abaixo do mínimo de 4,5:1) */
 button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--exp); outline-offset: 2px; border-radius: 3px; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
