@@ -5,10 +5,11 @@ Autora: **Bianca Glória França de Oliveira Chagas** (PPDRU/UNIFACS). Idealiza�
 | O quê | Licença | Em resumo |
 |---|---|---|
 | **Código-fonte próprio**: `index.html`, `assets/css/`, `assets/js/`, `scripts/*.py` (não inclui `assets/lib/`) | **MIT** (arquivo [`LICENSE`](LICENSE)) | Qualquer pessoa pode usar, copiar, modificar e redistribuir, inclusive comercialmente, desde que mantenha o aviso de direitos autorais com o nome da autora. |
-| **Dados tratados, mapas e gráficos**: arquivos em `data/` (exceto os indicados abaixo), `scripts/grupos.csv`, os CSVs baixados no painel e os mapas e gráficos exibidos | **CC BY-NC 4.0** ([texto da licença](https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br)) | Pode ser reaproveitado e adaptado com crédito à autora, **sem fins comerciais**. |
+| **Dados tratados, mapas, gráficos e textos**: arquivos em `data/` (exceto os indicados abaixo), `scripts/grupos.csv`, os CSVs baixados no painel, os mapas e gráficos exibidos e os textos do painel, inclusive a **Metodologia** | **CC BY-NC 4.0** ([texto da licença](https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br)) | Pode ser reaproveitado e adaptado com crédito à autora, **sem fins comerciais**. |
 | **Dados e serviços de terceiros** | Licenças de origem | Veja a lista abaixo. A licença CC BY-NC 4.0 vale só para o trabalho de tratamento, agregação e visualização da autora, não para os dados originais. |
 | **Planilha da Usuport** e os arquivos derivados dela: `data/escoamento/desembaraco.json` e `data/geo/rodovias_info.json` | **Fora da licença aberta** | Planilha fornecida pela Usuport em 30/10/2026 para este painel. Não pode ser reaproveitada sem autorização da Usuport. |
-| **Marcas e logos**: Atlas Austral, PPDRU, UNIFACS, Ânima e CAPES (`assets/img/`) | **Fora das licenças** | Marcas dos respectivos titulares, usadas para identificação. |
+| **Marca Atlas Austral**: logo, símbolo e favicon (`assets/img/atlasaustral_*.svg`, `assets/img/favicon*`, `favicon.ico`) | **© 2026 Bianca Glória França de Oliveira Chagas. Todos os direitos reservados.** | Fora das licenças MIT e CC BY-NC. Pode aparecer para citar ou divulgar o Atlas Austral, sem alteração e seguindo o Manual de Marca; outros usos dependem de autorização da autora. O nome no logo usa a fonte Fraunces (SIL Open Font License 1.1), convertida em curvas. |
+| **Logos institucionais**: PPDRU, UNIFACS, Ânima e CAPES (`assets/img/logos/`) | **Fora das licenças** | Marcas dos respectivos titulares, usadas para identificação. |
 
 ## Como dar o crédito (CC BY-NC 4.0)
 
@@ -34,7 +35,8 @@ Indique também se você fez alterações e mantenha o crédito das fontes origi
 # Licences (English summary)
 
 - **Own source code** (`index.html`, `assets/css/`, `assets/js/`, `scripts/*.py`): **MIT** – reuse freely, keeping the author's copyright notice.
-- **Processed data, maps and charts** (`data/` except the files below, `scripts/grupos.csv`, CSV downloads, the maps and charts shown): **CC BY-NC 4.0** – reuse with credit, non-commercial only.
+- **Processed data, maps, charts and texts** (`data/` except the files below, `scripts/grupos.csv`, CSV downloads, the maps and charts shown, and the dashboard texts, including the **Methodology**): **CC BY-NC 4.0** – reuse with credit, non-commercial only.
 - **Third-party data and services** keep their original licences: Comex Stat (public data), IBGE, DNIT/VGEO, ANAC, ANTAQ (public data), CARTO basemap (© OpenStreetMap contributors, ODbL; © CARTO), Sentinel-2 cloudless 2023 by EOX (CC BY-NC-SA 4.0, used only as a background, not redistributed), D3.js (ISC), d3-sankey (BSD-3).
 - **Usuport spreadsheet** and its derived files (`data/escoamento/desembaraco.json`, `data/geo/rodovias_info.json`): **not openly licensed**; provided by Usuport on 30 Oct 2026 for this dashboard and not to be reused without Usuport's permission.
-- **Logos and trademarks** (Atlas Austral, PPDRU, UNIFACS, Ânima, CAPES): not covered by any licence.
+- **Atlas Austral brand** (logo, symbol, favicon): © 2026 Bianca Glória França de Oliveira Chagas, all rights reserved; not covered by the MIT or CC licences. It may be shown, unaltered and following the brand manual, to cite or refer to Atlas Austral; any other use requires the author's permission.
+- **Institutional logos** (PPDRU, UNIFACS, Ânima, CAPES): trademarks of their owners, not covered by any licence.

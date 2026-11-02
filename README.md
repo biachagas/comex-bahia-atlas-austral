@@ -127,8 +127,8 @@ O progresso da publicação aparece na aba **Actions** do repositório (círculo
 ## 8. Licenças e créditos de terceiros
 
 - **Código** (`index.html`, `assets/css/`, `assets/js/`, `scripts/*.py`): **MIT**, arquivo [`LICENSE`](LICENSE).
-- **Dados tratados, mapas e gráficos** (`data/`, `scripts/grupos.csv`, CSVs do painel): **CC BY-NC 4.0**.
-- **Dados de terceiros** mantêm as licenças de origem. A **planilha da Usuport** (`data/escoamento/desembaraco.json`, `data/geo/rodovias_info.json`) e as **logos** ficam de fora das licenças abertas.
+- **Dados tratados, mapas, gráficos e textos** (`data/`, `scripts/grupos.csv`, CSVs do painel, textos e Metodologia): **CC BY-NC 4.0**.
+- **Dados de terceiros** mantêm as licenças de origem. A **planilha da Usuport** (`data/escoamento/desembaraco.json`, `data/geo/rodovias_info.json`) e as **logos** ficam de fora das licenças abertas. A **marca Atlas Austral** é © 2026 Bianca Chagas, todos os direitos reservados.
 - Detalhes por arquivo e como dar o crédito: [`LICENCAS.md`](LICENCAS.md).
 
 D3.js (ISC) e d3-sankey (BSD-3), arquivos de licença em `assets/lib/`. Mapas: © OpenStreetMap contributors, © CARTO; Sentinel-2 cloudless by EOX IT Services GmbH (CC BY-NC-SA 4.0); IBGE; DNIT/VGEO, ANAC, ANTAQ. Logos UNIFACS, Ânima, PPDRU e CAPES usadas sem alteração de proporções; a do PPDRU em versão branca para o fundo escuro.
