@@ -6,6 +6,7 @@
     return `<footer class="rodape-pagina">
         ${txt ? `<p>${t(txt)}</p>` : ""}
         <p>${t(ATLAS_CONFIG.fonte)}</p>
+        <p>${t("Este painel faz parte do")} <a href="https://biachagas.github.io/atlas-austral/${I18N.lang === "en" ? "?lang=en" : ""}">${t("site Atlas Austral")}</a>.</p>
       </footer>
       <div class="faixa-logos" role="contentinfo" aria-label="${t("Instituições")}">
         <img src="${L}ppdru-branco.png" alt="PPDRU – ${t("Programa de Pós-Graduação em Desenvolvimento Regional e Urbano")}" class="logo-ppdru" width="640" height="237" loading="lazy">
