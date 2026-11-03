@@ -20,10 +20,9 @@
     const en = I18N.lang === "en";
     const ops = FORMATOS.map(([k, pt, enr]) => `<option value="${k}">${en && enr ? enr : pt}</option>`).join("");
     return `<section class="cartao citar-bloco" aria-labelledby="cit-tit">
-        <h2 id="cit-tit" class="cit-tit">${t("Como citar")}</h2>
-        <label class="campo campo-linha">${t("Formato")} <select class="cit-estilo">${ops}</select></label>
+        <div class="cartao-cab"><h3 id="cit-tit">${t("Como citar")}</h3></div>
+        <div class="cit-linha"><select class="cit-estilo" aria-label="${t("Formato")}">${ops}</select><button type="button" class="btn btn-sec cit-copiar">${t("Copiar referência")}</button><span class="cit-ok" aria-live="polite"></span></div>
         <p class="cit-texto" aria-live="polite">${citacao("abnt", en)}</p>
-        <div class="cit-acoes"><button type="button" class="btn btn-sec cit-copiar">${t("Copiar referência")}</button><span class="cit-ok" aria-live="polite"></span></div>
       </section>`;
   }
   // um único ouvinte para todas as páginas (o conteúdo é trocado a cada aba)
@@ -46,7 +45,8 @@
 
   function html(pagina) {
     const txt = ATLAS_CONFIG.rodape[pagina];
-    return `${blocoCitar()}
+    // "Como citar" só nas páginas de dados (Municípios, Escoamento, Segmentos), não na Metodologia
+    return `${pagina === "metodologia" ? "" : blocoCitar()}
       <footer class="rodape-pagina">
         ${txt ? `<p>${t(txt)}</p>` : ""}
         <p>${t(ATLAS_CONFIG.fonte)}</p>
