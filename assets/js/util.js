@@ -54,10 +54,13 @@
   const versao = (document.querySelector('meta[name="versao"]') || {}).content;
   U.json = url => {
     if (!cache.has(url)) {
-      cache.set(url, fetch(versao ? url + (url.includes("?") ? "&" : "?") + "v=" + versao : url).then(r => {
+      // até 3 tentativas: no celular (rede instável, navegador do WhatsApp/Instagram) a 1ª pode falhar
+      const alvo = versao ? url + (url.includes("?") ? "&" : "?") + "v=" + versao : url;
+      const baixar = tentativa => fetch(alvo).then(r => {
         if (!r.ok) throw new Error(`Falha ao carregar ${url} (${r.status})`);
         return r.json();
-      }).catch(e => { cache.delete(url); throw e; }));
+      }).catch(e => tentativa < 3 ? new Promise(ok => setTimeout(ok, 700 * tentativa)).then(() => baixar(tentativa + 1)) : Promise.reject(e));
+      cache.set(url, baixar(1).catch(e => { cache.delete(url); throw e; }));
     }
     return cache.get(url);
   };

@@ -51,7 +51,13 @@
     try { await p.montar(conteudo, params); }
     catch (e) {
       console.error(e);
-      conteudo.innerHTML = `<div class="cartao erro"><p>${t("Não foi possível carregar esta página. Se você abriu o arquivo direto do computador (file://), use um servidor local — veja o README.")}</p></div>`;
+      const local = location.protocol === "file:";
+      conteudo.innerHTML = `<div class="cartao erro"><p>${local
+        ? t("Não foi possível carregar esta página. Se você abriu o arquivo direto do computador (file://), use um servidor local — veja o README.")
+        : t("Não foi possível carregar esta página. Verifique a conexão e tente de novo.")}</p>
+        ${local ? "" : `<button type="button" class="btn btn-sec" id="tentar-de-novo">${t("Tentar de novo")}</button>`}</div>`;
+      const bT = document.getElementById("tentar-de-novo");
+      if (bT) bT.addEventListener("click", () => rotear(true));
     }
   }
   window.addEventListener("hashchange", () => rotear());
