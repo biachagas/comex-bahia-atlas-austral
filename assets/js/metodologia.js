@@ -215,27 +215,7 @@
       <p class="apoio">${en
         ? "This work was carried out with the support of the Coordination for the Improvement of Higher Education Personnel – Brazil (CAPES) – Financing Code 001."
         : "O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – Brasil (CAPES) – Código de Financiamento 001."}</p>
-      <div class="citar">
-        <label class="campo campo-linha">${en ? "How to cite" : "Como citar"}
-          <select id="cit-estilo"><option value="abnt">ABNT (NBR 6023)</option><option value="apa">APA (7th ed.)</option><option value="iso">ISO 690</option></select>
-        </label>
-        <p id="cit-texto" class="cit-texto"></p>
-        <button type="button" class="btn btn-sec" id="cit-copiar">${en ? "Copy citation" : "Copiar referência"}</button>
-      </div>
     </section>`;
-  }
-
-  const URL_SITE = "https://biachagas.github.io/comex-bahia-atlas-austral/";
-  function citacao(estilo, en) {
-    const d = new Date(), dd = d.getDate(), mm = d.getMonth(), aa = d.getFullYear();
-    const mesAbnt = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."][mm];
-    const iso = `${aa}-${String(mm + 1).padStart(2, "0")}-${String(dd).padStart(2, "0")}`;
-    const tit = "Comércio Exterior da Bahia – Atlas Austral";
-    if (estilo === "apa") return `Chagas, B. G. F. de O., &amp; Oliveira, H. C. de. (2026). <i>${tit}</i> [${en ? "Interactive dashboard" : "Painel interativo"}]. PPDRU/UNIFACS. ${URL_SITE}`;
-    if (estilo === "iso") return en
-      ? `CHAGAS, Bianca Glória França de Oliveira and OLIVEIRA, Henrique Campos de. <i>${tit}</i> [online]. Salvador: PPDRU/UNIFACS, 2026 [viewed ${iso}]. Available from: ${URL_SITE}`
-      : `CHAGAS, Bianca Glória França de Oliveira e OLIVEIRA, Henrique Campos de. <i>${tit}</i> [em linha]. Salvador: PPDRU/UNIFACS, 2026 [consult. ${iso}]. Disponível em: ${URL_SITE}`;
-    return `CHAGAS, Bianca Glória França de Oliveira; OLIVEIRA, Henrique Campos de. <i>${tit}</i>. Salvador: PPDRU/UNIFACS, 2026. Disponível em: ${URL_SITE}. Acesso em: ${dd} ${mesAbnt} ${aa}.`;
   }
 
   async function montar(raiz) {
@@ -250,14 +230,6 @@
       ${creditos(I18N.lang)}
       ${Rodape.html("metodologia")}
     </section>`;
-    const sel = raiz.querySelector("#cit-estilo"), txt = raiz.querySelector("#cit-texto");
-    const mostrar = () => { txt.innerHTML = citacao(sel.value, en); };
-    sel.addEventListener("change", mostrar); mostrar();
-    raiz.querySelector("#cit-copiar").addEventListener("click", async e => {
-      const b = e.currentTarget, ok = en ? "Copied ✓" : "Copiado ✓", orig = b.textContent;
-      try { await navigator.clipboard.writeText(txt.textContent); b.textContent = ok; } catch (_) { const r = document.createRange(); r.selectNodeContents(txt); getSelection().removeAllRanges(); getSelection().addRange(r); }
-      setTimeout(() => { b.textContent = orig; }, 1800);
-    });
   }
 
   window.PaginaMetodologia = { montar };

@@ -347,6 +347,14 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 .citar { margin-top: 14px; padding: 12px 14px; background: #FBF7F0; border-radius: 8px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
 .citar .campo { font-size: .85rem; }
 .cit-texto { margin: 0; font-size: .86rem; line-height: 1.5; user-select: all; }
+/* "Como citar" no fim de todas as páginas, com lista suspensa (ABNT, APA, ISO) */
+.citar-bloco { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; border-left: 5px solid var(--rosa); }
+.citar-bloco .cit-tit { font-size: 1.1rem; }
+.citar-bloco .campo { font-size: .85rem; font-weight: 600; display: flex; gap: 8px; align-items: center; }
+.citar-bloco select { padding: 5px 8px; border: 1px solid var(--linha); border-radius: 6px; background: #fff; }
+.citar-bloco .cit-texto { background: #FBF7F0; padding: 10px 12px; border-radius: 8px; width: 100%; overflow-wrap: anywhere; }
+.cit-acoes { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.cit-ok { font-size: .8rem; color: var(--texto-2); }
 .explica { font-size: .8rem; color: var(--texto); background: #FBF7F0; border-left: 3px solid var(--rosa); padding: 7px 10px; margin: 0 0 8px; border-radius: 0 6px 6px 0; }
 .explica:empty { display: none; }
 .lista-seg { margin-top: 10px; font-size: .84rem; }

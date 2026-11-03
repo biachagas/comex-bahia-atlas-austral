@@ -75,7 +75,7 @@ html.a11y-escuro { --texto: var(--areia); --texto-2: var(--areia-2); --branco: v
 .a11y-escuro .btn-grupo i, .a11y-escuro .chk [class*="sim-"] { outline: 1px solid var(--areia-2); outline-offset: 1px; }
 .a11y-escuro .cartao { box-shadow: none; border: 1px solid #4A5563; }
 /* superfícies claras internas viram Navy */
-.a11y-escuro .opcao:has(input:checked), .a11y-escuro .selecionado, .a11y-escuro .citar, .a11y-escuro .explica,
+.a11y-escuro .opcao:has(input:checked), .a11y-escuro .selecionado, .a11y-escuro .citar, .a11y-escuro .citar-bloco .cit-texto, .a11y-escuro .citar-bloco select, .a11y-escuro .explica,
 .a11y-escuro .texto-longo code, .a11y-escuro .btn-grupo, .a11y-escuro .btn-grupo:hover, .a11y-escuro .btn-grupo.ativo,
 .a11y-escuro .grafico-vazio { background: var(--navy); }
 .a11y-escuro .tabela tbody tr, .a11y-escuro .tabela tbody tr:nth-child(even) { background: var(--navy); }
