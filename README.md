@@ -26,7 +26,7 @@ Código e interface desenvolvidos com apoio do assistente de IA Claude (Anthropi
 | `scripts/grupos.csv` | Classificação dos segmentos nos 10 grupos (editável). |
 | `scripts/simplificar_malhas.py` | Simplifica as malhas do IBGE/DNIT (só precisa rodar se a malha mudar). |
 | `CONFERENCIA_NUMEROS.md` | Conferência de números gerada automaticamente pelo script. |
-| `LICENSE` e `LICENCAS.md` | Licenças: MIT para o código; CC BY-NC 4.0 para dados tratados, mapas e gráficos; o que fica de fora. |
+| `LICENSE`, `LICENSE-DADOS.md` e `LICENCAS.md` | Licenças: MIT para o código; CC BY-NC 4.0 para dados tratados, mapas e gráficos; o que fica de fora. |
 | `DECISOES.md` | Todas as decisões tomadas no projeto. |
 | `DICIONARIO_DADOS.md` | Descrição de cada arquivo e coluna. |
 | `CHECKLIST.md` | Lista de testes para fazer antes da apresentação. |
@@ -127,7 +127,7 @@ O progresso da publicação aparece na aba **Actions** do repositório (círculo
 ## 8. Licenças e créditos de terceiros
 
 - **Código** (`index.html`, `assets/css/`, `assets/js/`, `scripts/*.py`): **MIT**, arquivo [`LICENSE`](LICENSE).
-- **Dados tratados, mapas, gráficos e textos** (`data/`, `scripts/grupos.csv`, CSVs do painel, textos e Metodologia): **CC BY-NC 4.0**.
+- **Dados tratados, mapas, gráficos e textos** (`data/`, `scripts/grupos.csv`, CSVs do painel, textos e Metodologia): **CC BY-NC 4.0**, arquivo [`LICENSE-DADOS.md`](LICENSE-DADOS.md).
 - **Dados de terceiros** mantêm as licenças de origem. A **planilha da Usuport** (`data/escoamento/desembaraco.json`, `data/geo/rodovias_info.json`) e as **logos** ficam de fora das licenças abertas. A **marca Atlas Austral** é © 2026 Bianca Chagas, todos os direitos reservados.
 - Detalhes por arquivo e como dar o crédito: [`LICENCAS.md`](LICENCAS.md).
 

@@ -24,6 +24,10 @@
     bL.setAttribute("title", I18N.lang === "en" ? "Ver em português" : "View in English");
     document.querySelector(".pular").textContent = t("Pular para o conteúdo");
     document.querySelector(".marca").setAttribute("aria-label", t("Atlas Austral – início"));
+    const lA = document.getElementById("link-atlas");
+    lA.querySelector(".la-longo").textContent = t("Voltar ao Atlas");
+    lA.setAttribute("aria-label", t("Voltar ao site Atlas Austral"));
+    lA.href = "https://biachagas.github.io/atlas-austral/" + (I18N.lang === "en" ? "?lang=en" : "");
   }
 
   async function rotear(forcar) {
