@@ -54,6 +54,7 @@
       </footer>
       <div class="faixa-logos" role="contentinfo" aria-label="${t("Instituições")}">
         <img src="${L}ppdru-branco.png" alt="PPDRU – ${t("Programa de Pós-Graduação em Desenvolvimento Regional e Urbano")}" class="logo-ppdru" width="640" height="237" loading="lazy">
+        <img src="${L}ppga-branco.png" alt="PPGA – ${t("Programa de Pós-Graduação em Administração")}" class="logo-ppga" width="640" height="200" loading="lazy">
         <img src="${L}unifacs-branco.png" alt="UNIFACS – Universidade Salvador" class="logo-unifacs" width="640" height="138" loading="lazy">
         <img src="${L}anima-branco.png" alt="${t("Ecossistema Ânima")}" class="logo-anima" width="640" height="478" loading="lazy">
         <img src="${L}capes-branca.svg" alt="CAPES – ${t("Coordenação de Aperfeiçoamento de Pessoal de Nível Superior")}" class="logo-capes" width="775" height="151" loading="lazy">
