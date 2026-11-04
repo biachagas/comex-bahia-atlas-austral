@@ -9,7 +9,7 @@ Autora: **Bianca Glória França de Oliveira Chagas** (PPDRU/UNIFACS). Idealiza�
 | **Dados e serviços de terceiros** | Licenças de origem | Veja a lista abaixo. A licença CC BY-NC 4.0 vale só para o trabalho de tratamento, agregação e visualização da autora, não para os dados originais. |
 | **Planilha da Usuport** e os arquivos derivados dela: `data/escoamento/desembaraco.json` e `data/geo/rodovias_info.json` | **Fora da licença aberta** | Planilha fornecida pela Usuport em 30/10/2026 para este painel. Não pode ser reaproveitada sem autorização da Usuport. |
 | **Marca Atlas Austral**: logo, símbolo e favicon (`assets/img/atlas-austral-escuro.svg`, `assets/img/favicon*`, `favicon.ico`) | **© 2026 Bianca Glória França de Oliveira Chagas. Todos os direitos reservados.** | Fora das licenças MIT e CC BY-NC. Pode aparecer para citar ou divulgar o Atlas Austral, sem alteração e seguindo o Manual de Marca; outros usos dependem de autorização da autora. O logo é a mesma versão em curvas do site Atlas Austral (sem texto em fonte, só desenho vetorial). |
-| **Logos institucionais**: PPDRU, UNIFACS, Ânima e CAPES (`assets/img/logos/`) | **Fora das licenças** | Marcas dos respectivos titulares, usadas para identificação. |
+| **Logos institucionais**: PPDRU, PPGA, UNIFACS, Ânima e CAPES (`assets/img/logos/`) | **Fora das licenças** | Marcas dos respectivos titulares, usadas para identificação. |
 
 ## Como dar o crédito (CC BY-NC 4.0)
 
@@ -39,4 +39,4 @@ Indique também se você fez alterações e mantenha o crédito das fontes origi
 - **Third-party data and services** keep their original licences: Comex Stat (public data), IBGE, DNIT/VGEO, ANAC, ANTAQ (public data), CARTO basemap (© OpenStreetMap contributors, ODbL; © CARTO), Sentinel-2 cloudless 2023 by EOX (CC BY-NC-SA 4.0, used only as a background, not redistributed), D3.js (ISC), d3-sankey (BSD-3).
 - **Usuport spreadsheet** and its derived files (`data/escoamento/desembaraco.json`, `data/geo/rodovias_info.json`): **not openly licensed**; provided by Usuport on 30 Oct 2026 for this dashboard and not to be reused without Usuport's permission.
 - **Atlas Austral brand** (logo, symbol, favicon): © 2026 Bianca Glória França de Oliveira Chagas, all rights reserved; not covered by the MIT or CC licences. It may be shown, unaltered and following the brand manual, to cite or refer to Atlas Austral; any other use requires the author's permission.
-- **Institutional logos** (PPDRU, UNIFACS, Ânima, CAPES): trademarks of their owners, not covered by any licence.
+- **Institutional logos** (PPDRU, PPGA, UNIFACS, Ânima, CAPES): trademarks of their owners, not covered by any licence.

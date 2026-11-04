@@ -95,7 +95,7 @@
       <li><b>Dados tratados, mapas, gráficos e textos</b> (inclusive os CSVs baixados aqui e esta Metodologia): licença <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br" target="_blank" rel="noopener">CC BY-NC 4.0</a>. Podem ser reaproveitados com crédito (veja "Como citar"), mas não para fins comerciais.</li>
       <li><b>Dados de terceiros</b> mantêm as licenças de origem: Comex Stat (dados públicos), IBGE, DNIT/VGEO, ANAC e ANTAQ; mapa de fundo © OpenStreetMap contributors e © CARTO; Sentinel-2 cloudless (EOX), CC BY-NC-SA 4.0, usado só como fundo e não redistribuído; D3.js (ISC) e d3-sankey (BSD-3).</li>
       <li><b>Planilha da Usuport</b> (dados de rodovias e de desembaraço na página Escoamento): fica de fora da licença aberta.</li>
-      <li><b>Marca Atlas Austral</b> (logo, símbolo e ícone): © 2026 Bianca Chagas, todos os direitos reservados. Pode ser exibida sem alteração para citar ou divulgar o Atlas Austral; outros usos dependem de autorização. As logos institucionais (PPDRU, UNIFACS, Ânima e CAPES) pertencem aos respectivos titulares. Detalhes por arquivo: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
+      <li><b>Marca Atlas Austral</b> (logo, símbolo e ícone): © 2026 Bianca Chagas, todos os direitos reservados. Pode ser exibida sem alteração para citar ou divulgar o Atlas Austral; outros usos dependem de autorização. As logos institucionais (PPDRU, PPGA, UNIFACS, Ânima e CAPES) pertencem aos respectivos titulares. Detalhes por arquivo: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
     </ul>`;
 
   const EN = (m) => `
@@ -170,7 +170,7 @@
       <li><b>Processed data, maps, charts and texts</b> (including the CSV downloads and this Methodology): <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC 4.0</a>. They may be reused with credit (see "How to cite"), but not for commercial purposes.</li>
       <li><b>Third-party data</b> keep their original licences: Comex Stat (public data), IBGE, DNIT/VGEO, ANAC and ANTAQ; basemap © OpenStreetMap contributors and © CARTO; Sentinel-2 cloudless (EOX), CC BY-NC-SA 4.0, used only as a background and not redistributed; D3.js (ISC) and d3-sankey (BSD-3).</li>
       <li><b>Usuport spreadsheet</b> (road and customs-clearance data on the Shipping routes page): not covered by the open licence.</li>
-      <li><b>Atlas Austral brand</b> (logo, symbol and icon): © 2026 Bianca Chagas, all rights reserved. It may be shown unaltered to cite or refer to Atlas Austral; any other use requires permission. Institutional logos (PPDRU, UNIFACS, Ânima and CAPES) belong to their owners. File-by-file details: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
+      <li><b>Atlas Austral brand</b> (logo, symbol and icon): © 2026 Bianca Chagas, all rights reserved. It may be shown unaltered to cite or refer to Atlas Austral; any other use requires permission. Institutional logos (PPDRU, PPGA, UNIFACS, Ânima and CAPES) belong to their owners. File-by-file details: <a href="https://github.com/biachagas/comex-bahia-atlas-austral/blob/main/LICENCAS.md" target="_blank" rel="noopener">LICENCAS.md</a>.</li>
     </ul>`;
 
   function creditos(lang) {
