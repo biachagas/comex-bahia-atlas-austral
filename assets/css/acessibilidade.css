@@ -137,3 +137,5 @@ html.a11y-escuro { --texto: var(--areia); --texto-2: var(--areia-2); --branco: v
 .a11y-texto-grande .mapa-legenda { left: 56px; }
 .a11y-escuro .kpi-v.desce::before { color: var(--exp); }
 .a11y-escuro .kpi-v.sobe::before { color: var(--imp); }
+.a11y-escuro .faixa-pre { background: #16304D; color: #fff; border-bottom-color: #4A5563; }
+.a11y-escuro .faixa-pre b { color: #F7A36B; }
