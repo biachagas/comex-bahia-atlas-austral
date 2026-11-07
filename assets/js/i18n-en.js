@@ -261,6 +261,8 @@ window.I18N_EN = {
  "Mineração de Urânio (Caetité) e ligação Sudoeste -> Litoral": "Uranium mining (Caetité) and Southwest -> coast link",
  "Modo apresentação": "Presentation mode",
  "Voltar ao Atlas": "Back to the Atlas",
+ "Versão de pré-lançamento": "Pre-launch version",
+ "lançamento oficial em abril de 2027": "official launch in April 2027",
  "Como citar": "How to cite",
  "Formato": "Format",
  "Copiar referência": "Copy citation",
