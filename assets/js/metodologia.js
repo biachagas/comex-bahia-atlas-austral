@@ -208,10 +208,13 @@
         <div class="botoes-perfil">${btnOrcid(h.orcid)}${btnLattes(h.lattes)}</div>
       </div>
       <div class="pessoa">
-        <p class="papel">${en ? "Supplementary data" : "Dados complementares"}</p>
+        <p class="papel">${en ? "Cooperation" : "Cooperação"}</p>
         <p class="nome nome-menor">Usuport</p>
         <ul class="formacao"><li>${en ? "Connectivity spreadsheet (highways and customs clearance), provided on 30 October 2026" : "Planilha de conectividade (rodovias e desembaraço aduaneiro), disponibilizada em 30/10/2026"}</li></ul>
       </div>
+      <p class="apoio">${en
+        ? "Developed within the project <i>Infraestrutura e Desenvolvimento Regional: Cadeias Globais de Valor (CGV) e Sistemas Estruturantes de Logística e Transporte</i> (Infrastructure and Regional Development: Global Value Chains and Structuring Logistics and Transport Systems), by the Graduate Program in Regional and Urban Development (PPDRU) and the Graduate Program in Business Administration (PPGA) at UNIFACS, in cooperation with Usuport, with support from CAPES/FAPESB Call No. 38/2020 (PDPG – Strategic Partnerships in the States III)."
+        : "Desenvolvido no âmbito do projeto <i>Infraestrutura e Desenvolvimento Regional: Cadeias Globais de Valor (CGV) e Sistemas Estruturantes de Logística e Transporte</i>, do Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) e do Programa de Pós-Graduação em Administração (PPGA) da UNIFACS, em cooperação com a Usuport, com apoio do Edital CAPES/FAPESB nº 38/2020 (PDPG – Parcerias Estratégicas nos Estados III)."}</p>
       <p class="apoio">${en
         ? "This work was carried out with the support of the Coordination for the Improvement of Higher Education Personnel – Brazil (CAPES) – Financing Code 001."
         : "O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior – Brasil (CAPES) – Código de Financiamento 001."}</p>
