@@ -142,6 +142,7 @@ window.I18N_EN = {
  "Dutovia": "Pipeline",
  "Dutovias": "Pipelines",
  "Ecossistema Ânima": "Ânima Ecosystem",
+ "Fundação de Amparo à Pesquisa do Estado da Bahia": "Bahia State Research Support Foundation",
  "Egito": "Egypt",
  "Eixo Ilhéus-Itabuna: acesso ao Porto de Ilhéus": "Ilhéus–Itabuna axis: access to the Port of Ilhéus",
  "Eixo Leste-Oeste: Soja, Milho e Algodão do Oeste (Barreiras/LEM) -> Salvador/Cotegipe": "East–West axis: soybeans, maize and cotton from the West (Barreiras/LEM) -> Salvador/Cotegipe",

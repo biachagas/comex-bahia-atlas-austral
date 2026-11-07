@@ -315,6 +315,7 @@ main { max-width: 1680px; margin: 0 auto; padding: var(--gap) 20px 0; outline: n
 .faixa-logos .logo-ppga { width: 200px; }
 .faixa-logos .logo-unifacs { width: 230px; }
 .faixa-logos .logo-anima { width: 92px; }
+.faixa-logos .logo-fapesb { width: 150px; }
 .faixa-logos .logo-capes { width: 380px; } /* mínimo do Manual de Identidade Visual da CAPES (p. 7): 380×70 px na versão horizontal */
 @media (max-width: 1023px) { .faixa-logos { margin-left: -12px; margin-right: -12px; } } /* acompanha o recuo do main (antes passava 8 px da tela entre 641 e 1023 px) */
 @media (max-width: 640px) {
